@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- default -->
+<bean id="f1" class="springioc.sample05.User"/>
+
+
+<!-- 생성자 받은 것 -->
+<bean id="f2" class="springioc.sample05.User">
+	<constructor-arg index="0" value="김베리"/>
+	<constructor-arg index="1" value="2017-02-14"/>
+</bean>
+
+<!-- f2와 같은 내용이지만 c스키마를 사용함 'c:생성자의 인자명' -->
+<bean id="f4" class="springioc.sample05.User"
+		c:name=" 김베리" c:birth="2017-02-14"/>
+	<!-- index를 사용하고자 한다면 'c:_1 == 첫번째 인덱스' 이렇게 사용해야 한다. -->
+
+
+
+<bean id="f3" class="springioc.sample05.User">
+	<property name="name" value="김까미"/>
+	<property name="birth" value="2000-01-01"/>
+</bean>
+
+<!-- f3과 같지만  p스키마를 사용함 -->
+<bean id="f5" class="springioc.sample05.User"
+		p:name="김까미" p:birth="2000-01-01"/>
+
+</beans>

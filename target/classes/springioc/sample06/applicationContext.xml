@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- consoleoutput은 출력 클래스인데 데이터가 없어서 이대로 끝 default -->
+<bean id="consoleRef" class="springioc.sample06.ConsoleOutput"/>
+
+<!-- string 필드가 하나 있고 세팅을 해줄 때 생성자 또는 setter 둘다 있어서 하면 됨, 둘다 쓰면 중복처리로 빨간밑줄이 나옴 -->
+<bean id="fileRef" class="springioc.sample06.FileOutput"
+		c:filePath="c:/temp/test.txt"/>
+
+<!-- myBean으로 만들어주기 -->
+<bean id="myBean" class="springioc.sample06.MessageBeanImpl"
+		c:name="김베리" p:phone="010-1234-5678" p:output-ref="fileRef"></bean>
+		
+<bean id="myBeanConsole" class="springioc.sample06.MessageBeanImpl"
+		c:name="김베리2" p:phone="010-1111-2222" p:output-ref="consoleRef"></bean>
+		<!-- 최종적으로 찍어낸 것이 mybean과 mybean console인데요  이걸 댕겨서 test에 적어야 해요 -->		
+
+</beans>

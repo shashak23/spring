@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="foo0" class="springIoC_sample02.Foo"></bean>
+
+<bean id="foo1" class="springIoC_sample02.Foo">
+	<constructor-arg value="abc"/>
+</bean>
+
+<bean id="foo2" class="springIoC_sample02.Foo">
+	<constructor-arg index="0" type="java.Lang.String" value="abc"/>
+	<constructor-arg index="1" type="int" value="abc"/>
+</bean>
+
+<bean id="myBar" class="springIoC_sample02.Foo">
+	<constructor-arg index="0" type="java.Lang.String" value="abc"/>
+</bean>
+<bean id="foo3" class="springIoC_sample02.Foo">
+	<constructor-arg ref="myBar"/>
+</bean>
+
+</beans>

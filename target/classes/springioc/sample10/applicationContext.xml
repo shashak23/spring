@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-autowire="default"
+	>
+
+<bean id="myObj" class="springioc.sample10.TestBean" autowire="no"/>
+
+<!-- byType은 id이 달라야지 안 튕깁니다! -->
+<bean id="data1234" class="springioc.sample10.DataBean" primary="true"/>
+<!-- 같은 타입이 여러개가 있어도 primary가 있으면 그게 있는 애를 먼저 가져가요 -->
+
+<bean id="data2" class="springioc.sample10.DataBean"/>
+
+</beans>

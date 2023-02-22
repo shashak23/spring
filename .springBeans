@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.9.12.202003180620-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>src/springIoC_sample01/applicationContext.xml</config>
+		<config>src/springIoC_sample02/applicationContext.xml</config>
+		<config>src/springIoC_sample03/applicationContext.xml</config>
+		<config>src/springioc/sample04/applicationContext.xml</config>
+		<config>src/springioc/sample05/applicationContext.xml</config>
+		<config>src/springioc/sample05/beans.xml</config>
+		<config>src/springioc/sample06/applicationContext.xml</config>
+		<config>src/springioc/sample08/applicationContex.xml</config>
+		<config>src/springioc/anno/sample01/applicationContext.xml</config>
+		<config>src/springioc/anno/sample02/applicationContext.xml</config>
+		<config>src/springioc/anno/example01/applicationContext.xml</config>
+		<config>src/springioc/sample07/applicationContext.xml</config>
+	</configs>
+	<autoconfigs>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>
