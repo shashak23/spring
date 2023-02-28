@@ -4,8 +4,7 @@ package my.spring.springweb.sample01;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,9 +16,9 @@ import my.spring.springweb.sample01.vo.User;
 @RequestMapping(value="testController08")
 public class TestController08 {
 
-	private static final Logger Logger =
-			LoggerFactory.getLogger(TestController08.class);
-	
+//	private static final Logger Logger =
+//			LoggerFactory.getLogger(TestController08.class);
+//	
 	@PostMapping("userEL")
 	public String myMethod(Model model) {
 		
