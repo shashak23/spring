@@ -31,7 +31,7 @@ public class SessionAttributeController06 {
 	@ModelAttribute("data2") // 모델객체 주입받기 
 	public String createString2(Model model) {   // 맵핑이 잡힌 핸들러에서만 하는게 아니고 여기서도 가능해요 
 
-		Student student = new Student(20,"김베리","철학과");
+		Student student = new Student(20,"김베리","철학과"); 
 		model.addAttribute("kim", student);  // 모델객체가 해당 객체로 리턴이 됐을 떄 그때 이름이 kim이 있으면 session에 들어간다 ! 
 		log.debug("createString2() 호출되었어요!"); // 모델말고 session에도 저장을 해주는 걸 해 보는 겁니다?
 		
